@@ -3,7 +3,7 @@
         <div class="v-md-toolbar" v-if="toolbars.length>0">
             <div class="btn-group mr-3" role="group" v-for="group in toolbars">
                 <button type="button" :title="i.title" :class="'btn btn-'+theme" v-on:click="command(i.cmd)"
-                    :disabled="preview && !i.ready" v-for="i in group"><i :class="i.ico"></i></button>
+                    :disabled="preview && !i.ready" v-for="i in group"><i :class="iconify" data-icon="i.ico"></i></button>
             </div>
         </div>
         <div class="v-md-wrapper" v-on:click="editor.focus()">
@@ -100,7 +100,7 @@
 
                         'bold': {
                             title: 'Bold',
-                            ico: 'fas far fa-bold mdi mdi-format-bold',
+                            ico: 'tabler:bold',
                             cmd: 'bold',
                             hotkey: 'Ctrl-B'
                         },
@@ -139,7 +139,7 @@
                         },
                         'link': {
                             title: 'Link',
-                            ico: "fas far fa-link mdi mdi-link",
+                            ico: "tabler:link",
                             cmd: 'link',
                             hotkey: 'Ctrl-K'
                         },
@@ -158,7 +158,7 @@
                         },
                         "preview": {
                             cmd: "preview",
-                            ico: "fas far fa-eye mdi mdi-eye",
+                            ico: "tabler:eye",
                             title: "Toggle Preview",
                             hotkey: 'Ctrl-P',
                             ready: true
