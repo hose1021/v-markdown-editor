@@ -3,7 +3,7 @@
         <div class="v-md-toolbar" v-if="toolbars.length>0">
             <div class="btn-group mr-3" role="group" v-for="group in toolbars">
                 <button type="button" :title="i.title" :class="'btn btn-'+theme" v-on:click="command(i.cmd)"
-                    :disabled="preview && !i.ready" v-for="i in group"><i class="iconify" data-icon="i.ico"></i></button>
+                    :disabled="preview && !i.ready" v-for="i in group"><i class="iconify" :data-icon="i.ico"></i></button>
             </div>
         </div>
         <div class="v-md-wrapper" v-on:click="editor.focus()">
